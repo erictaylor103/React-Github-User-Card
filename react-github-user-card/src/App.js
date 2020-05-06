@@ -28,7 +28,7 @@ class App extends React.Component {
   componentDidMount(){
     //get my git hub user data via axios and update userData state
     axios
-    .get("https://api.github.com/users/erictaylor103")
+    .get("https://cors-anywhere.herokuapp.com/https://api.github.com/users/erictaylor103")
     .then(response => {
       this.setState({
         userData: response.data
@@ -40,7 +40,7 @@ class App extends React.Component {
 
     //get the followers via axios
     axios
-    .get("https://api.github.com/users/erictaylor103/followers")
+    .get("https://cors-anywhere.herokuapp.com/https://api.github.com/users/erictaylor103/followers")
     .then(response => {
       this.setState({
         followers: response.data
